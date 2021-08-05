@@ -155,11 +155,7 @@ addCovariateHour <- function(level, variable, dataset, zona, path){
   total_db$Day_f <- factor(total_db$Day, ordered = T)
   total_db$Month_f <- factor(total_db$Month, ordered = T)
   #put mean over month if NA
-  total_db <- total_db %>% 
-    group_by(Month) %>%
-    mutate(Incid = ifelse(is.na(Incid), 
-                          mean(Incid,na.rm = T), Incid)) %>% ungroup()
-  
+
   total_db <- total_db %>%
     arrange(Date, Hour) %>%
     mutate(Y_roll2_mean = rollmean(Y, 2*24, na.pad = T, align = "right"),
