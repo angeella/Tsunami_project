@@ -14,12 +14,21 @@
 #path: where the R functions needed are (must end with /)
 
 
-TSUNAMImodel <- function(level, variable, form.mod, analysis, dataset, zona, nday, model = "gam", years_sel = c(2020:2021), path = "~/Github/TSUNAMI/Code/Angela/"){
-  source(paste0(path,"library.R"))
-  source(paste0(path, "utils.R"))
-  source(paste0(path,"addCovariateHour.R"))
-  source(paste0(path,"create_newdataHour.R"))
-  source(paste0(path,"models_predict.R"))
+TSUNAMImodel <- function(level, 
+                         variable, 
+                         form.mod, 
+                         analysis, 
+                         dataset, 
+                         zona, 
+                         nday, 
+                         model = "gam", 
+                         years_sel = c(2020:2021), 
+                         path){
+  source(paste0(path,"Code/library.R"))
+  source(paste0(path, "Code/utils.R"))
+  source(paste0(path,"Code/addCovariateHour.R"))
+  source(paste0(path,"Code/create_newdataHour.R"))
+  source(paste0(path,"Code/models_predict.R"))
   
   #Check arguments
   level_set <- c("soreu", "province")

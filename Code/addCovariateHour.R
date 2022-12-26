@@ -11,8 +11,8 @@
 addCovariateHour <- function(level, variable, dataset, zona, path){
   
   #Load libraries and utils functions
-  source(paste0(path,"library.R"))
-  source(paste0(path,"utils.R"))
+  source(paste0(path,"Code/library.R"))
+  source(paste0(path,"Code/utils.R"))
   
   #Check arguments
   level_set <- c("soreu", "province")

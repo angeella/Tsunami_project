@@ -32,7 +32,7 @@ models_predict <- function(form.mod,
         mod <- mgcv::bam(form.mod, data = DB, family = nb(), weights = eval(str2expression(weights)), select = TRUE)
         
       }else{
-        mod <- mgcv::bam(form.mod, data = DB, family = nb(),select = TRUE)
+        mod <- mgcv::bam(as.formula(form.mod), data = DB, family = nb(),select = TRUE)
         
       }
     }

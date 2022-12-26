@@ -7,7 +7,7 @@
 #zona: inside the level
 
 create_newdataHour <- function(DB, nday, level, zona, full = TRUE){
-  
+  Sys.setlocale("LC_TIME", "en_US")
   level_set <- c("soreu", "province")
   zona_set <- c("pianura", "laghi", "como", "cremona", "lecco", "lodi", "mantova", "pavia", "varese", "monza")
   
